@@ -1,0 +1,33 @@
+body {
+  background: #efb771;
+  color: #363232;
+  font-family: monospace;
+  line-height: 200%;
+  flex-direction: column;
+  margin: 0 auto;
+  font-size: 19px;
+}
+
+.container {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  width: 0%;
+  height: 8px;
+  background: #6c919c;
+  z-index: 10000;
+}
+
+.percentage {
+  position: fixed;
+  color: #3b545c;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 12px;
+}
