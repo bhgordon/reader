@@ -1,7 +1,7 @@
 body {
   background: #efb771;
   color: #363232;
-  font-family: monospace;
+  font-family: "Futura";
   line-height: 200%;
   flex-direction: column;
   margin: 0 auto;
@@ -13,6 +13,7 @@ body {
   width: 80%;
   flex-direction: column;
   margin: 0 auto;
+  text-align: justify;
 }
 
 #scroll-progress {
@@ -41,5 +42,6 @@ body {
 @media (min-width: 768px) {
   .container {
     width: 40%;
+    font-size: 18px;
   }
 }
