@@ -8,6 +8,11 @@ body {
   font-size: 16px;
 }
 
+h1 {
+  text-align: left;
+  line-height: 130%;
+}
+
 .container {
   display: flex;
   width: 80%;
@@ -33,9 +38,58 @@ body {
   font-size: 12px;
 }
 
+.font-selector-btn {
+  position: fixed;
+  font-size: 12px;
+  color: #3b545c;
+  margin-left: 10px;
+  margin-top: 5px;
+  top: 50%;
+  left: -10px;
+  transform: rotateZ(90deg);
+}
+
+.font-selector {
+  display: none;
+  background-color: #69665bc7;
+  color: antiquewhite;
+  position: fixed;
+  margin-left: 10px;
+  margin-top: 5px;
+  top: 50%;
+  left: 40px;
+  border-radius: 5px;
+  padding: 5px 25px;
+}
+
+.visible {
+  display: block;
+}
+
+.font-selection:hover {
+  color: #5c5454;
+}
+
+
+#futura {
+  font-family: "Futura";
+  cursor: pointer;
+}
+
+#serif {
+  font-family: serif;
+  cursor: pointer;
+}
+
+#monospace {
+  font-family: monospace;
+  cursor: pointer;
+}
+
 @media (min-width: 576px) {
   .container {
     width: 55%;
+    line-height: 210%;
   }
 }
 
@@ -43,5 +97,6 @@ body {
   .container {
     width: 40%;
     font-size: 18px;
+    line-height: 210%;
   }
 }
