@@ -1,4 +1,5 @@
 const body = document.querySelector("body");
+const container = document.querySelector(".container");
 const scrollProgress = document.getElementById('scroll-progress');
 const height = document.documentElement.scrollHeight;
 const percentage = document.querySelector(".percentage");
@@ -24,17 +25,25 @@ fontBtn.addEventListener('click', (e) => {
   fontSelector.classList.toggle("visible");
 })
 
+// tap to see side bar
+body.addEventListener("click", (e) => {
+  percentage.style.left = "0";
+  fontBtn.style.left = "-10";
+})
+
+// tap outside fontSelector to close it
+// container.addEventListener("click", (e) => {
+//   fontSelector.classList.toggle("hidden");
+// })
+
 window.onscroll = function (e) {
 
   if (fontSelector.classList.contains('visible')) {
     fontBtn.classList.add("visible");
   } else if (this.oldScroll <= this.scrollY) {
-    // percentage.classList.add("hidden");
     percentage.style.left = "-40";
     fontBtn.style.left = "-40";
-    // fontBtn.classList.add("hidden");
   } else {
-    percentage.classList.remove("hidden");
     percentage.style.left = "0";
     fontBtn.style.left = "-10";
   }
