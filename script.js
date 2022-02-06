@@ -29,11 +29,14 @@ window.onscroll = function (e) {
   if (fontSelector.classList.contains('visible')) {
     fontBtn.classList.add("visible");
   } else if (this.oldScroll <= this.scrollY) {
-    percentage.classList.add("hidden");
-    fontBtn.classList.add("hidden");
+    // percentage.classList.add("hidden");
+    percentage.style.left = "-40";
+    fontBtn.style.left = "-40";
+    // fontBtn.classList.add("hidden");
   } else {
     percentage.classList.remove("hidden");
-    fontBtn.classList.remove("hidden");
+    percentage.style.left = "0";
+    fontBtn.style.left = "-10";
   }
 
   // if(this.oldScroll <= this.scrollY) {

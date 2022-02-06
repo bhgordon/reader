@@ -36,6 +36,7 @@ h1 {
   margin-left: 10px;
   margin-top: 5px;
   font-size: 12px;
+  transition: all 500ms;
 }
 
 .font-selector-btn {
@@ -47,6 +48,7 @@ h1 {
   top: 50%;
   left: -10px;
   transform: rotateZ(90deg);
+  transition: all 500ms;
 }
 
 .font-selector {
