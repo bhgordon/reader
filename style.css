@@ -66,6 +66,10 @@ h1 {
   display: block;
 }
 
+.hidden {
+  display: none;
+}
+
 .font-selection:hover {
   color: #5c5454;
 }

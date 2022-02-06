@@ -5,7 +5,6 @@ const percentage = document.querySelector(".percentage");
 const fontSelection = document.querySelectorAll(".font-selection");
 const fontSelector = document.querySelector(".font-selector");
 const fontBtn = document.querySelector(".font-selector-btn");
-console.log(fontSelector);
 
 window.addEventListener('scroll', () => {
   const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
@@ -22,6 +21,29 @@ fontSelection.forEach((item) => {
 })
 
 fontBtn.addEventListener('click', (e) => {
-  console.log("clicked");
   fontSelector.classList.toggle("visible");
 })
+
+window.onscroll = function (e) {
+
+  if (fontSelector.classList.contains('visible')) {
+    fontBtn.classList.add("visible");
+  } else if (this.oldScroll <= this.scrollY) {
+    percentage.classList.add("hidden");
+    fontBtn.classList.add("hidden");
+  } else {
+    percentage.classList.remove("hidden");
+    fontBtn.classList.remove("hidden");
+  }
+
+  // if(this.oldScroll <= this.scrollY) {
+  //   percentage.classList.add("hidden");
+  //   fontBtn.classList.add("hidden");
+  // } else if (fontSelector.classList.contains('visible')) {
+  //   fontBtn.classList.add("visible");
+  // } else {
+  //   percentage.classList.remove("hidden");
+  //   fontBtn.classList.remove("hidden");
+  // }
+  this.oldScroll = this.scrollY;
+}
